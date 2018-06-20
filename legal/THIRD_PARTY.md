@@ -9,7 +9,7 @@ This page details all runtime OSS dependencies of `@atomist/spring-sdm`.
 | License | Count |
 |---------|-------|
 |AFLv2.1|1|
-|Apache-2.0|35|
+|Apache-2.0|32|
 |Artistic-2.0|4|
 |BSD-2-Clause|21|
 |BSD-3-Clause|27|
@@ -19,7 +19,7 @@ This page details all runtime OSS dependencies of `@atomist/spring-sdm`.
 |Custom: https://github.com/douglascrockford/JSON-js|1|
 |GPL-3.0|5|
 |ISC|116|
-|MIT|734|
+|MIT|733|
 |Public Domain|1|
 |Unlicense|2|
 |WTFPL|3|
@@ -36,11 +36,8 @@ Apache License 2.0 - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apa
 | Name | Version | Publisher | Repository |
 |------|---------|-----------|------------|
 |`@atomist/automation-client-ext-dashboard`|`0.1.0-20180618202825`|Atomist, Inc.|[https://github.com/atomist/automation-client-ext-dashboard](https://github.com/atomist/automation-client-ext-dashboard)|
-|`@atomist/sdm-pack-checkstyle`|`0.1.1`|Atomist, Inc.|[https://github.com/atomist/sdm-pack-checkstyle](https://github.com/atomist/sdm-pack-checkstyle)|
-|`@atomist/sdm-pack-sloc`|`0.1.1`|Atomist, Inc.|[https://github.com/atomist/sdm-pack-sloc](https://github.com/atomist/sdm-pack-sloc)|
-|`@atomist/sdm-pack-sonarqube`|`0.1.2`|Atomist, Inc.|[https://github.com/atomist/sdm-pack-sonarqube](https://github.com/atomist/sdm-pack-sonarqube)|
-|`@atomist/sdm-pack-spring`|`0.1.2`|Atomist, Inc.|[https://github.com/atomist/sdm-pack-spring](https://github.com/atomist/sdm-pack-spring)|
-|`@atomist/sdm`|`0.2.3-nortissej.bb-curl-or-axios.20180619000533`|Atomist, Inc.|[https://github.com/atomist/sdm](https://github.com/atomist/sdm)|
+|`@atomist/sdm-pack-spring`|`0.1.3`|Atomist, Inc.|[https://github.com/atomist/sdm-pack-spring](https://github.com/atomist/sdm-pack-spring)|
+|`@atomist/sdm`|`0.2.3`|Atomist, Inc.|[https://github.com/atomist/sdm](https://github.com/atomist/sdm)|
 |`@atomist/slack-messages`|`0.12.1`|Atomist|[https://github.com/atomist/slack-messages](https://github.com/atomist/slack-messages)|
 |`@atomist/spring-sdm`|`0.1.0`|Jessica Kerr|[https://github.com/atomist/spring-sdm](https://github.com/atomist/spring-sdm)|
 |`JSONStream`|`1.3.2`|Dominic Tarr|[https://github.com/dominictarr/JSONStream](https://github.com/dominictarr/JSONStream)|
@@ -348,7 +345,6 @@ MIT License - [http://www.opensource.org/licenses/MIT](http://www.opensource.org
 |`@types/minimatch`|`3.0.3`||[https://www.github.com/DefinitelyTyped/DefinitelyTyped](https://www.github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/node`|`8.10.20`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/prettier`|`1.10.0`||[https://www.github.com/DefinitelyTyped/DefinitelyTyped](https://www.github.com/DefinitelyTyped/DefinitelyTyped)|
-|`@types/properties-reader`|`0.0.1`||[https://www.github.com/DefinitelyTyped/DefinitelyTyped](https://www.github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/range-parser`|`1.2.2`||[https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/retry`|`0.10.2`||[https://www.github.com/DefinitelyTyped/DefinitelyTyped](https://www.github.com/DefinitelyTyped/DefinitelyTyped)|
 |`@types/serve-static`|`1.13.2`||[https://www.github.com/DefinitelyTyped/DefinitelyTyped](https://www.github.com/DefinitelyTyped/DefinitelyTyped)|
