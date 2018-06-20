@@ -22,57 +22,16 @@ import {
     ConfigureOptions,
     configureSdm,
 } from "@atomist/sdm/internal/machine/configureSdm";
-import { additiveCloudFoundryMachine } from "./machines/additiveCloudFoundryMachine";
+import { springGeneratorMachine } from "./machine/springGeneratorMachine";
 import { configureLogzio } from "./util/logzio";
-
-/*
- * This sample-sdm includes code for a variety of
- * software delivery machines. Choose one here.
- *
- * The provided software delivery machines include
- *
- * Cloud Foundry full delivery (cloudFoundryMachine):
- * - sample project creation is `create spring`
- * - runs locally for the Test environment (you can change this)
- * - deploys to PCF for production (see README.md for configuration)
- *
- * Kubernetes full delivery (k8sMachine):
- * - deploys to a sandbox kubernetes environment. You don't need your own
- * - sample project creation is `create spring`
- *
- * Autofix only (autofixMachine):
- * - adds license headers to Java and TypeScript files
- *
- * Artifact checks only (artifactVerifyingMachine):
- * - builds and performs a check on Java maven artifacts
- *
- * Project creation only (projectCreationMachine):
- * - provides commands to create Java and Node projects
- *
- * Static analysis only (staticAnalysisMachine):
- * - runs Checkstyle when Java changes; reports to GitHub status
- *
- * start with any of these and change it to make it your own!
- */
 
 function createMachine(
     config: SoftwareDeliveryMachineConfiguration): SoftwareDeliveryMachine {
-    return additiveCloudFoundryMachine(config);
+    return springGeneratorMachine(config);
 }
 
 const Options: ConfigureOptions = {
-    requiredConfigurationValues: [
-        "sdm",
-        "sdm.cloudfoundry.user",
-        "sdm.cloudfoundry.password",
-        "sdm.cloudfoundry.org",
-        "sdm.cloudfoundry.spaces.production",
-        "sdm.cloudfoundry.spaces.staging",
-    ],
-    // sdm: {
-    //     // TODO get this from the config
-    //     logFactory: tryRolarLogFactory("http://rolar.cfapps.io"),
-    // },
+    requiredConfigurationValues: [],
 };
 
 export const configuration: Configuration = {
