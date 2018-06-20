@@ -14,26 +14,33 @@
  * limitations under the License.
  */
 
+import { GitHubRepoRef } from "@atomist/automation-client/operations/common/GitHubRepoRef";
 import { SoftwareDeliveryMachine } from "@atomist/sdm";
-import { kotlinRestGenerator, springRestGenerator } from "@atomist/sdm-pack-spring/dist";
+import {
+    CommonJavaGeneratorConfig,
+    springBootGenerator,
+} from "@atomist/sdm-pack-spring";
 import { SoftwareDeliveryMachineConfiguration } from "@atomist/sdm/api/machine/SoftwareDeliveryMachineOptions";
 import { createSoftwareDeliveryMachine } from "@atomist/sdm/machine/machineFactory";
 
-/**
- * Variant of cloudFoundryMachine that uses additive, "contributor" style goal setting.
- * @return {SoftwareDeliveryMachine}
- */
 export function springGeneratorMachine(configuration: SoftwareDeliveryMachineConfiguration): SoftwareDeliveryMachine {
     const sdm: SoftwareDeliveryMachine = createSoftwareDeliveryMachine(
         {
-            name: "CloudFoundry software delivery machine",
+            name: "Spring software delivery machine",
             configuration,
         });
-    sdm.addGenerators(springRestGenerator, kotlinRestGenerator);
-    sdm.addCommands({
-        name: "helloworld",
-        listener: async cli => cli.addressChannels("Hello from spring-sdm"),
-        intent: "hello spring-sdm",
-    });
+
+    sdm.addGenerators(springBootGenerator({
+            ...CommonJavaGeneratorConfig,
+            seed: () => new GitHubRepoRef("spring-team", "spring-rest-seed"),
+        }, {
+            intent: "generate spring",
+        }), springBootGenerator({
+            ...CommonJavaGeneratorConfig,
+            seed: () => new GitHubRepoRef("johnsonr", "flux-flix-service"),
+        }, {
+            intent: "generate spring kotlin",
+        }));
+
     return sdm;
 }

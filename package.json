@@ -1,8 +1,8 @@
 {
   "name": "@atomist/spring-sdm",
   "version": "0.1.0",
-  "description": "an Atomist automation for software delivery",
-  "author": "Jessica Kerr",
+  "description": "an Atomist SDM serving global Spring support",
+  "author": "Atomist, Inc.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -11,7 +11,8 @@
   "keywords": [
     "atomist",
     "automation",
-    "github"
+    "sdm",
+    "spring"
   ],
   "homepage": "https://github.com/atomist/spring-sdm#readme",
   "bugs": {
@@ -19,20 +20,16 @@
   },
   "dependencies": {
     "@atomist/automation-client": "^0.17.3",
-    "@atomist/automation-client-ext-dashboard": "0.1.0-20180618202825",
-    "@atomist/sdm": "^0.2.3",
-    "@atomist/sdm-pack-spring": "^0.1.3",
+    "@atomist/automation-client-ext-dashboard": "0.1.0-20180620184836",
+    "@atomist/automation-client-ext-logzio": "0.1.0-20180613131229",
+    "@atomist/sdm": "0.2.4-20180620134805",
+    "@atomist/sdm-pack-spring": "0.1.4-20180620031804",
     "@atomist/slack-messages": "^0.12.1",
-    "@commitlint/config-conventional": "^6.1.3",
-    "@commitlint/lint": "^6.2.0",
-    "@commitlint/load": "^6.1.3",
     "@types/lodash": "^4.14.109",
     "logzio-nodejs": "^0.4.11",
-    "properties-reader": "0.0.16",
     "winston-logzio": "^1.0.8"
   },
   "devDependencies": {
-    "@types/properties-reader": "0.0.1",
     "@types/mocha": "^2.2.48",
     "@types/node": "^8.9.5",
     "@types/power-assert": "^1.4.29",

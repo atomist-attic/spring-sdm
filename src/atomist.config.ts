@@ -16,43 +16,14 @@
 
 import { Configuration } from "@atomist/automation-client";
 import { configureDashboardNotifications } from "@atomist/automation-client-ext-dashboard";
-import { SoftwareDeliveryMachine } from "@atomist/sdm";
-import { SoftwareDeliveryMachineConfiguration } from "@atomist/sdm/api/machine/SoftwareDeliveryMachineOptions";
-import {
-    ConfigureOptions,
-    configureSdm,
-} from "@atomist/sdm/internal/machine/configureSdm";
+import { configureLogzio } from "@atomist/automation-client-ext-logzio";
+import { configureSdm } from "@atomist/sdm/internal/machine/configureSdm";
 import { springGeneratorMachine } from "./machine/springGeneratorMachine";
-import { configureLogzio } from "./util/logzio";
-
-function createMachine(
-    config: SoftwareDeliveryMachineConfiguration): SoftwareDeliveryMachine {
-    return springGeneratorMachine(config);
-}
-
-const Options: ConfigureOptions = {
-    requiredConfigurationValues: [],
-};
 
 export const configuration: Configuration = {
-    http: {
-        auth: {
-            basic: {
-                enabled: true,
-                username: "admin",
-                password: process.env.LOCAL_ATOMIST_ADMIN_PASSWORD,
-            },
-        },
-    },
-    cluster: {
-        workers: 1,
-    },
-    logging: {
-        level: "info",
-    },
     postProcessors: [
         configureLogzio,
         configureDashboardNotifications,
-        configureSdm(createMachine, Options),
+        configureSdm(springGeneratorMachine),
     ],
 };
