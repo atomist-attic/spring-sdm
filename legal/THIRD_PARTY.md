@@ -41,7 +41,7 @@ Apache License 2.0 - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apa
 |`@atomist/sdm-pack-spring`|`0.1.4-20180625090653`|Atomist, Inc.|[https://github.com/atomist/sdm-pack-spring](https://github.com/atomist/sdm-pack-spring)|
 |`@atomist/sdm`|`0.3.0-20180625110209`|Atomist, Inc.|[https://github.com/atomist/sdm](https://github.com/atomist/sdm)|
 |`@atomist/slack-messages`|`0.12.1`|Atomist|[https://github.com/atomist/slack-messages](https://github.com/atomist/slack-messages)|
-|`@atomist/spring-sdm`|`0.1.1`|Atomist, Inc.|[https://github.com/atomist/spring-sdm](https://github.com/atomist/spring-sdm)|
+|`@atomist/spring-sdm`|`0.1.2`|Atomist, Inc.|[https://github.com/atomist/spring-sdm](https://github.com/atomist/spring-sdm)|
 |`JSONStream`|`1.3.2`|Dominic Tarr|[https://github.com/dominictarr/JSONStream](https://github.com/dominictarr/JSONStream)|
 |`ascli`|`1.0.1`|Daniel Wirtz|[https://github.com/dcodeIO/ascli](https://github.com/dcodeIO/ascli)|
 |`aws-sign2`|`0.6.0`|Mikeal Rogers|[https://github.com/mikeal/aws-sign](https://github.com/mikeal/aws-sign)|
