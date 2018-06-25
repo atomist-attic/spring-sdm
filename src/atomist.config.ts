@@ -17,7 +17,7 @@
 import { Configuration } from "@atomist/automation-client";
 import { configureDashboardNotifications } from "@atomist/automation-client-ext-dashboard";
 import { configureLogzio } from "@atomist/automation-client-ext-logzio";
-import { configureSdm } from "@atomist/sdm/internal/machine/configureSdm";
+import { configureSdm } from "@atomist/sdm-core";
 import { springGeneratorMachine } from "./machine/springGeneratorMachine";
 
 export const configuration: Configuration = {

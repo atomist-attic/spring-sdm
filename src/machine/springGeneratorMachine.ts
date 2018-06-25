@@ -16,12 +16,12 @@
 
 import { GitHubRepoRef } from "@atomist/automation-client/operations/common/GitHubRepoRef";
 import { SoftwareDeliveryMachine } from "@atomist/sdm";
+import { createSoftwareDeliveryMachine } from "@atomist/sdm-core";
 import {
     CommonJavaGeneratorConfig,
     springBootGenerator,
 } from "@atomist/sdm-pack-spring";
 import { SoftwareDeliveryMachineConfiguration } from "@atomist/sdm/api/machine/SoftwareDeliveryMachineOptions";
-import { createSoftwareDeliveryMachine } from "@atomist/sdm/machine/machineFactory";
 
 export function springGeneratorMachine(configuration: SoftwareDeliveryMachineConfiguration): SoftwareDeliveryMachine {
     const sdm: SoftwareDeliveryMachine = createSoftwareDeliveryMachine(
