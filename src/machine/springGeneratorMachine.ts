@@ -26,20 +26,23 @@ import { SoftwareDeliveryMachineConfiguration } from "@atomist/sdm/api/machine/S
 export function springGeneratorMachine(configuration: SoftwareDeliveryMachineConfiguration): SoftwareDeliveryMachine {
     const sdm: SoftwareDeliveryMachine = createSoftwareDeliveryMachine(
         {
-            name: "Spring software delivery machine",
+            name: "Spring Seed Generators",
             configuration,
         });
 
-    sdm.addGenerators(springBootGenerator({
+    sdm.addGeneratorCommand(springBootGenerator({
             ...CommonJavaGeneratorConfig,
             seed: () => new GitHubRepoRef("spring-team", "spring-rest-seed"),
         }, {
             intent: "generate spring",
-        }), springBootGenerator({
+            description: "Generate a new Spring Boot project from seed",
+        }));
+    sdm.addGeneratorCommand(springBootGenerator({
             ...CommonJavaGeneratorConfig,
             seed: () => new GitHubRepoRef("johnsonr", "flux-flix-service"),
         }, {
             intent: "generate spring kotlin",
+            description: "Generate a new Spring Boot Kotlin project from seed",
         }));
 
     return sdm;
