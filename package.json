@@ -1,6 +1,6 @@
 {
   "name": "@atomist/spring-sdm",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "an Atomist SDM serving global Spring support",
   "author": "Atomist, Inc.",
   "license": "Apache-2.0",
